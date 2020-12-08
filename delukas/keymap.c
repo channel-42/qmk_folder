@@ -41,13 +41,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_LSFT,  DE_Y,   KC_X,    KC_C,    KC_V,    KC_B, DE_LABK,  DE_PLUS,  KC_N,    KC_M,    KC_COMM, KC_DOT,  DE_MINS,  KC_RSFT, \
                         KC_LALT, KC_LGUI, MO(_LOWER), KC_ENT, KC_SPC, KC_BSPC, MO(_RAISE), KC_RALT \
 ),
-/* LOWER
+/* LOWER STILL WIP
  * ,-----------------------------------------.                    ,-----------------------------------------.
- * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
+ * |      | F1   | F2   |F3    | F4   | F5   |                    | F6   |  F7  | F8   | F9   |F10   | F11  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |                    |  F7  |  F8  |  F9  | F10  | F11  | F12  |
+ * |      |   |  |  '   |   ^  |  =   |   #  |                    |      |  (   |  {   | [    |      | F12  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |   `  |   !  |   @  |   #  |   $  |   %  |-------.    ,-------| LEFT |   UP | DOWN |RIGHT |   #  |   -  |
+ * |      |   !  |   "  |   ?  |   %  |   *  |-------.    ,-------| LEFT |   UP | DOWN |RIGHT |   #  |   -  |
  * |------+------+------+------+------+------|   <   |    |    [  |------+------+------+------+------+------|
  * |      |      |      |      |      |      |-------|    |-------|      |   ~  |   +  |   {  |   }  |   |  |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
@@ -56,9 +56,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'           '------''--------------------'
  */
 [_LOWER] = LAYOUT( \
-  _______, _______, _______, _______, _______, _______,                   _______, _______, _______,_______, _______, _______,\
-  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12, \
-  KC_GRV, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                    KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, DE_HASH, KC_TILD, \
+  _______, KC_F1  , KC_F2  , KC_F3  , KC_F4,   KC_F5,                     KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,\
+  _______, DE_PIPE, DE_QUOT, KC_GRV , DE_EQL , DE_HASH,                   XXXXXXX, DE_LPRN, DE_LCBR, DE_LBRC, XXXXXXX, KC_F12,\
+  _______, DE_EXLM, DE_DQUO, DE_QUES, DE_PERC, DE_ASTR,                   KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, DE_HASH, KC_TILD, \
   _______, _______, _______, _______, _______, _______, _______, DE_LBRC, XXXXXXX, DE_TILD, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, \
                              _______, _______, _______, _______, _______,  _______, _______, _______\
 ),
