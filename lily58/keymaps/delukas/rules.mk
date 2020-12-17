@@ -27,6 +27,7 @@ SRC +=  ./lib/rgb_state_reader.c \
         ./lib/logo_reader.c \
         ./lib/keylogger.c \
         ./lib/wpm_counter.c \
+        ./lib/progress_bar.c \
         # ./lib/mode_icon_reader.c \
         # ./lib/host_led_state_reader.c \
         # ./lib/timelogger.c \

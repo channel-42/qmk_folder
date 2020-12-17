@@ -132,6 +132,9 @@ void set_keylog(uint16_t keycode, keyrecord_t *record);
 const char *read_keylog(void);
 const char *read_keylogs(void);
 const char *read_wpm(void);
+void set_progressbar(char head, char body);
+const char *read_progressbar(void);
+
 
 // const char *read_mode_icon(bool swap);
 // const char *read_host_led_state(void);
@@ -143,7 +146,8 @@ void oled_task_user(void) {
     // If you want to change the display of OLED, you need to change here
     oled_write_ln(read_layer_state(), false);
     oled_write_ln(read_keylog(), false);
-    oled_write_ln(read_keylogs(), false);
+    //oled_write_ln(read_keylogs(), false);
+    oled_write_ln(read_progressbar(), false);
     oled_write_ln(read_wpm(), false);
     //oled_write_ln(read_mode_icon(keymap_config.swap_lalt_lgui), false);
     //oled_write_ln(read_host_led_state(), false);
@@ -158,6 +162,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   if (record->event.pressed) {
 #ifdef OLED_DRIVER_ENABLE
     set_keylog(keycode, record);
+    set_progressbar('^', '|');
 #endif
     // set_timelog();
   }
