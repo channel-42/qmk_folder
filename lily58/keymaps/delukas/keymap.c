@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      | F1   | F2   |F3    | F4   | F5   |                    | F6   |  F7  | F8   | F9   |F10   | F11  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |   |  |  '   |      |      |   #  |                    |      |  (   |  {   | [    |      | F12  |
+ * |      |   |  |  '   |   ^  |  =   |   #  |                    |      |  (   |  {   | [    |      | F12  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |      |   !  |   "  |   ?  |   %  |   *  |-------.    ,-------| LEFT |   UP | DOWN |RIGHT |   #  |   -  |
  * |------+------+------+------+------+------|   <   |    |    [  |------+------+------+------+------+------|
@@ -131,6 +131,7 @@ const char *read_logo(void);
 void set_keylog(uint16_t keycode, keyrecord_t *record);
 const char *read_keylog(void);
 const char *read_keylogs(void);
+const char *read_wpm(void);
 
 // const char *read_mode_icon(bool swap);
 // const char *read_host_led_state(void);
@@ -143,6 +144,7 @@ void oled_task_user(void) {
     oled_write_ln(read_layer_state(), false);
     oled_write_ln(read_keylog(), false);
     oled_write_ln(read_keylogs(), false);
+    oled_write_ln(read_wpm(), false);
     //oled_write_ln(read_mode_icon(keymap_config.swap_lalt_lgui), false);
     //oled_write_ln(read_host_led_state(), false);
     //oled_write_ln(read_timelog(), false);
