@@ -1,6 +1,6 @@
 # The layout
 
-Modified QWERZ layout for former iso-de users.
+Modified QWERTZ layout for former iso-de users.
 
 ![layout](https://github.com/channel-42/qmk_folder/blob/master/resources/layout.png "Layout")
 
