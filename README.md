@@ -16,7 +16,7 @@ I worte some simple functions to add some additional features to the displays. T
 
 # Usage
 
-Copy the Lily58 folder (or just the delukas folder if you didn't change the font in lib) to `~/qmk_firmware/keyboards/Lily58`.
+Copy the Lily58 folder (or just the delukas and lib folder) to `~/qmk_firmware/keyboards/Lily58`.
 
 To flash run the following:
 `sudo make kb_name:keymap_name:bootloader_name`
