@@ -13,10 +13,10 @@ char *mode_to_str(int mode) {
     return "static";
   } else if (2 <= mode && mode <= 4) {
     return "rainbow";
-  }else if (5 <= mode && mode <= 14) {
-    return "gradient";
+  }else if (mode == 5) {
+    return "pulse";
   }
-  return "";
+  return "Unkown";
 }
 
 const char *get_rgb_info_str(void) {
